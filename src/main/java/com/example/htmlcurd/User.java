@@ -1,12 +1,29 @@
 package com.example.htmlcurd;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "test")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class User {
 
+    @Id
     private String name;
     private String password;
     private String id;
     private long phoneno;
 
+/*    public User(){}
    public User(String name, String password, String id, long phoneno) {
         this.name = name;
         this.password = password;
@@ -44,5 +61,5 @@ public class User {
 
     public void setPhoneno(long phoneno) {
         this.phoneno = phoneno;
-    }
+    }*/
 }
